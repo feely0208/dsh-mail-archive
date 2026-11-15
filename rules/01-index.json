@@ -1,0 +1,12 @@
+{
+  "id": "MAIL-INDEX",
+  "title": "归档目录缺索引文件（MANIFEST.json / 索引.csv）",
+  "severity": "high",
+  "source": "存证与审计基线：无索引的归档在争议时无法快速定位与核验，等同于没有归档",
+  "advice": "运行本插件的 --index 模式自动生成 MANIFEST.json 与 索引.csv（含时间/发件人/收件人/主题），并随归档一起保存。",
+  "check": {
+    "type": "file-exists",
+    "globs": ["MANIFEST.json", "manifest.json", "索引.csv", "index.csv", "*索引*"],
+    "require": true
+  }
+}

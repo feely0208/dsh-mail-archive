@@ -1,0 +1,58 @@
+{
+  "name": "@deepwhale-cn/dsh-mail-archive",
+  "version": "0.1.0",
+  "description": "检查邮件与聊天记录导出归档：索引清单、留存说明、敏感信息打码提醒 —— 企业留存义务的证据链",
+  "type": "module",
+  "license": "MIT",
+  "keywords": [
+    "dsh",
+    "dsh-plugin",
+    "deepseek-harness",
+    "plugin",
+    "skill",
+    "邮件",
+    "归档",
+    "留存",
+    "存证"
+  ],
+  "files": [
+    "lib",
+    "skill",
+    "bin",
+    "rules",
+    "cordis.patch.yml",
+    "tests/fixtures",
+    "README.md"
+  ],
+  "main": "./lib/index.js",
+  "exports": {
+    ".": "./lib/index.js",
+    "./package.json": "./package.json"
+  },
+  "bin": {
+    "dsh-mail-archive": "bin/cli.mjs"
+  },
+  "engines": {
+    "dsh": ">=0.1.0-rc.6 <0.3.0",
+    "node": ">=18"
+  },
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    }
+  },
+  "dependencies": {
+    "@deepwhale-cn/dsh-guard-core": "^0.10.1"
+  },
+  "peerDependencies": {
+    "@deepseek-ai/dsh-skill": "*"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/feely0208/dsh-mail-archive.git"
+  },
+  "homepage": "https://deepwhale.org.cn/plugins.html",
+  "bugs": {
+    "url": "https://github.com/feely0208/dsh-mail-archive/issues"
+  }
+}
